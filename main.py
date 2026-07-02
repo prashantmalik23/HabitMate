@@ -1,24 +1,32 @@
-import json
+from auth import register_user, login_user
+from dashboard import dashboard
+from utils import show_title
 
-def register_user():
-    name = input("Enter Your Name: ")
-    phone = input("Enter Your Phone Number: ")
-    password = input("Create a Password: ")
 
-    with open("data/users.json", "r") as file:
-        users = json.load(file)
+def main():
+    while True:
+        show_title()
 
-    new_user = {
-        "name": name,
-        "phone": phone,
-        "password": password
-    }
+        print("1. Register")
+        print("2. Login")
+        print("3. Exit")
 
-    users.append(new_user)
+        choice = input("\nEnter Your Choice: ")
 
-    with open("data/users.json", "w") as file:
-        json.dump(users, file, indent=4)
+        if choice == "1":
+            register_user()
 
-    print("User registered successfully.")
+        elif choice == "2":
+            logged_in_user = login_user()
+            if logged_in_user:
+                dashboard(logged_in_user)
 
-register_user()
+        elif choice == "3":
+            print("\nThank you for using HabitTracker.")
+            break
+
+        else:
+            print("\nInvalid Choice! Please try again.")
+
+if __name__ == "__main__":
+    main()
