@@ -1,0 +1,13 @@
+[
+    {
+        "habit_id": 1,
+        "user_phone": "7983213737",
+        "habit_name": "Exercise",
+        "frequency": "Daily",
+        "category": "Fitness",
+        "created_at": "2026-07-02",
+        "completed_dates": [],
+        "streak": 0,
+        "status": "Active"
+    }
+]

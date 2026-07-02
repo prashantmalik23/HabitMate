@@ -1,3 +1,5 @@
+from habits import add_habit
+
 def dashboard(user):
     """
     Displays the user dashboard after successful login
@@ -15,7 +17,7 @@ def dashboard(user):
         choice = input("\nEnter Your Choice: ")
 
         if choice == "1":
-            print("\nAdd Habit feature is under development.")
+            add_habit(user)
         elif choice == "2":
             print("View Habits")
         elif choice == "3":
