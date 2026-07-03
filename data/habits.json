@@ -9,5 +9,16 @@
         "completed_dates": [],
         "streak": 0,
         "status": "Active"
+    },
+    {
+        "habit_id": 2,
+        "user_phone": "7983213737",
+        "habit_name": "Coding",
+        "frequency": "Daily",
+        "category": "Work",
+        "created_at": "2026-07-02",
+        "completed_dates": [],
+        "streak": 0,
+        "status": "Active"
     }
 ]

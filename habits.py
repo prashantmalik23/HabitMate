@@ -77,4 +77,38 @@ def add_habit(user):
 
     print("\nHabit added successfully!")
 
+import json
 
+
+def view_habits(user):
+    """
+    Display all habits of the logged-in user.
+    """
+
+    with open("data/habits.json", "r") as file:
+        habits = json.load(file)
+
+    print("\n========================")
+    print("       MY HABITS")
+    print("========================")
+
+    found = False
+
+    for habit in habits:
+
+        if habit["user_phone"] == user["phone"]:
+
+            found = True
+
+            print(f"\nID         : {habit['habit_id']}")
+            print(f"Habit      : {habit['habit_name']}")
+            print(f"Category   : {habit['category']}")
+            print(f"Frequency  : {habit['frequency']}")
+            print(f"Created On : {habit['created_at']}")
+            print(f"Streak     : {habit['streak']}")
+            print(f"Status     : {habit['status']}")
+
+            print("----------------------------")
+
+    if not found:
+        print("\nNo habits found.")

@@ -1,4 +1,4 @@
-from habits import add_habit
+from habits import add_habit , view_habits
 
 def dashboard(user):
     """
@@ -19,7 +19,7 @@ def dashboard(user):
         if choice == "1":
             add_habit(user)
         elif choice == "2":
-            print("View Habits")
+            view_habits(user)
         elif choice == "3":
             print("coming soon...")
         elif choice == "4":
